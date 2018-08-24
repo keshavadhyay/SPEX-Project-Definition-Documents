@@ -145,7 +145,7 @@ A list of ``essential questions'' to be addressed during PLANTHAB's development 
 
 \section{Secondary Objectives}
 \label{secondaryobjectives}
-A two-way communication system is desired but may be scaled back due to resource limitations based on the choice of payload. 
+A two-way communication system is desired but may be scaled back due to resource limitations based on the choice of payload. Geofencing and control over the APRS transmitter's frequency is one such pertinent case.
 Similarly, consistent location information has been an elusive target. 
 As the HAB is trusted with more complex payloads, the tracking becomes of greater importance.
  
@@ -167,6 +167,8 @@ The pursuit of HAB is the pursuit of maximizing scientific output using off-the-
 Progress here develops SPEX's knowledge base for all future missions, including SPEX's understanding of what can and cannot be achieved. 
 Presently proposed operations include rigorous pre-flight testing for diagnosis and correction of software and hardware components, post-flight analysis and amelioration and inculcation of this into the design cycle. 
 
+
+
 Documenting training sets and linking them to performance is a potential avenue for exploration. 
 This can be evaluated both to determine which training data results in the best performance and in gauging how resilient methods implemented are to a varied number of incorrect samples in the data set.
 Also, by incorporating testing and training processes into the design and execution process, SPEX can iterate on more advanced software tools. 
@@ -186,7 +188,7 @@ An gifted electronics team may choose to consider much more advanced imaging equ
 
 As RIT looks to expand its research endeavors, especially in fields such as Imaging Science where it possesses an advantage, developing a long and mutually beneficial relationship with that department is also a goal unto itself. 
 As a platform for experiments, SPEX has the unique opportunity to be a student body involved in the synthesis, publication and presentation of materials. 
-This can build SPEX's reputation and foster relationships with faculty and research organizations, leading to opportunities for mentorship and funding from sustainable sources.
+It is also held that missions be pursued on the basis of ability to draw in more permanent and sustainable sources of recognition and funding. This can build SPEX's reputation and foster relationships with faculty and research organizations, leading to opportunities for mentorship and funding from sustainable sources.
 
 \section{Implementation}
 \label{implementation}
@@ -201,19 +203,19 @@ This can build SPEX's reputation and foster relationships with faculty and resea
 
 \subsubsection{Vehicle}
 \label{deliverables-vehicle}
-The desired product at the end of the development is a modular HAB vehicle capable of reliably, predictably, and safely carrying a payload compatible with a n*cubesat size. 
+The desired product at the end of the development is a modular HAB vehicle capable of reliably, predictably, and safely carrying a payload compatible with a nU cubesat size. The lower limit is a 3U internal volume, with the upper bound not exceeding 8U.
 The vehicle is defined as the mechanically sound HAB structure and common electronic/software components necessary for payload deployment. 
-Mechanical soundness includes, but is not limited to, protection from disintegration, temperature, winds, pressure, charge buildup and vibration. 
-To this end a power system, APRS transmitter, pressure/temperature/humidity sensor, payload arming/disarming mechanism and all facilitating processing and memory elements. 
-There must also be a data analytics system to record flight data and provide information leading to more advanced HABs and missions. 
-This must consist of sensors, processing and memory required for the task.
-It is expected that the payload will be modular, fitting both an x-u form factor and having a power supply of its own. 
+Mechanical soundness includes, but is not limited to, protection from disintegration, temperature, winds, pressure, charge buildup and vibration.
+To this end a power system, APRS transmitter, pressure/temperature/humidity sensor, payload arming/disarming mechanism and all facilitating processing and memory elements are to be included. 
+A data recording system to record flight data and provide information leading to more advanced HABs and missions is aimed for, with measurements from sensors stored to an SD card on the HAB. 
+% This must consist of sensors, processing and memory required for the task.  FAA compliance for payloads over 6 lbs also requires equiping the HAB vehicle with a termination system. To prevent repeated modification of the vehicle, the vehicle itself must always have this functionality.
+It is expected that the payload will be modular, fitting both an x-u form factor and having a power supply of its own.
 This is because optimization of a HAB vehicle capable of handling any modular payload results in selection for a power system dedicated solely to the HAB vehicle board and merely arming/disarming the payload electronics. 
 Past issues have included adhesives melting, batteries breaking apart and damage due to environmental factors. Each of these contingencies is to be specifically tested and solved for.
 
 \subsubsection{Software and Payload}
 \label{deliverables-payload}
-Python, instead of C/C++ allows for greater accessibility and the tradeoff in moving isn't worth the increased development costs. 
+Python is to be the language of choice, greatly increasing the talent base which can be drawn upon. Development costs and considerations for quality control also encourage the use of Python over C/C++.
 Previous HAB teams have considered this question, and given the resources on the team, their findings are restated. OpenCV 3 will continue to be used as a major part.
 
 The primary payload on HAB5 is the PLANTHAB payload.
@@ -269,11 +271,11 @@ In upstate New York, plant vitality is at its highest in late spring through ear
 \section{Externalities}
 \subsection{Prerequisite Skills}
 Proficiency in Python (CS 1 or equivalent) is required for implementing PLANTHAB image capturing and processing software. 
-Experience with Python computer vision and machine learning tools is required for developing the advanced CV objectives like object detection and segmentation. 
-EE skill set varies greatly based on method of implementation---purchasing ready-to-assemble products to design and fabrication of custom PCBs. 
+Experience with Python computer vision and machine learning tools is required for developing the advanced CV objectives like object detection and segmentation. A minimum of 2-3 dedicated individuals will be required for the project.
+Electrical engineering skill set varies greatly based on method of implementation---purchasing ready-to-assemble products to design and fabrication of custom PCBs. A single eiectrical engineer could, with significant effort, design and implement the sysem. A safer approach would be 2-3 with moderate experience; further talent being used to move the project away from premade subcomponents.
 The result is that we have the opportunity to tune implementation based on the EEs we find. 
 Understanding of basic circuits and connections/interfacing is still required. 
-An understanding of the fundamentals of heat transfer is recommended in order to do basic thermal analysis. 
+An understanding of the fundamentals of heat transfer is recommended in order to do basic thermal analysis. A team of 2-3 mechanicals would be required for the project itself. Additional talent can be used to probe the question of camera stabilization and other long-term niceties. 
 The HAB structure leverages HAB4 designs so the brunt of mechanical design will focus on camera mounting and enclosures. 
 University Physics II (with optics) is recommended for imaging systems testing and calibration tasks.
 
@@ -329,9 +331,6 @@ Cataloguing the progress, as described in \autoref{deliverables}, builds on pres
 Similarly, the potential for much more advanced algorithmic excursions on maintained or minimally modified hardware is substantial. 
 SPEX's in-house ability is developed in line with estimates for skills required for later missions. 
 
-It is also held that missions be pursued on the basis of ability to draw in more permanent and sustainable sources of recognition and funding. 
-A divergence from the current model of resetting every year and relying on alumni limits the ability of organization to attempt challenges worthy of its aspirations. 
-This PDD explicitly seeks a realization capable of winning eyeballs and sponsors.
 
 \section*{Acknowledgements}
 The authors would like to thank Dan Mitchell, Matt Glazer, Dylan Wagner, and T.\@J.\@Tarazevits for their invaluable contributions. 
